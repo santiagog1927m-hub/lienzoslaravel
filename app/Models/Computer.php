@@ -9,6 +9,17 @@ class Computer extends Model
 {
     use HasFactory;
 
+    
+    protected $fillable = [
+        'number',
+        'brand'
+    ];
+
+
+
+
+
+
     // Un computador tiene muchos aprendices
     public function aprendice(){
         return $this->hasOne(Aprendice::class);

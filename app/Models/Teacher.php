@@ -8,6 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Teacher extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'name',
+        'email',
+        'area_id',
+        'training_center_id'
+    ];
+
+
+
+
+
+
 
     // Un profesor tiene un area
     public function area(){

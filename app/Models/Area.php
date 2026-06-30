@@ -9,6 +9,15 @@ class Area extends Model
 {
     use HasFactory;
 
+    
+    protected $fillable = [
+        'name'
+    ];
+
+
+
+
+
     // Un area tiene muchos profesores relacion 1:n
     public function teachers(){
         return $this->hasMany(Teacher::class);
@@ -18,4 +27,5 @@ class Area extends Model
     public function courses(){
         return $this->hasMany(Course::class);
     }
+
 }

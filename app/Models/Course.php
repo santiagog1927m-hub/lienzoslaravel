@@ -9,6 +9,20 @@ class Course extends Model
 {
     use HasFactory;
 
+    
+    protected $fillable = [
+        'course number',
+        'day',
+        'area_id',
+        'training_center_id'
+        
+    ];
+
+
+
+
+
+
     // Un curso pertenece a una area
     public function area(){
         return $this->belongsTo(Area::class);

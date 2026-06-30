@@ -9,6 +9,19 @@ class Aprendice extends Model
 {
     use HasFactory;
 
+    
+    protected $fillable = [
+        'nombre',
+        'email',
+        'cell_number',
+        'course_id',
+        'computer_id'
+    ];
+
+
+
+
+
     // Un aprendiz pertenece a un curso
     public function course(){
         return $this->belongsTo(Course::class);
