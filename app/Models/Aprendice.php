@@ -11,7 +11,7 @@ class Aprendice extends Model
 
     
     protected $fillable = [
-        'nombre',
+        'name',
         'email',
         'cell_number',
         'course_id',

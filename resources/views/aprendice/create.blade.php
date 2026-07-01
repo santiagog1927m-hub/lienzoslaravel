@@ -41,9 +41,9 @@
     <select name="course_id" id="user_id" class="form-control">
         <option value="">Seleccione un curso</option>
 
-        @foreach($courses as $courses)
+        @foreach($courses as $course)
             <option value="{{ $course->id }}">
-                {{ $course->name }}
+                {{ $course->course_number }}
             </option>
         @endforeach
     </select>
@@ -60,7 +60,7 @@
 
         @foreach($computers as $computer)
             <option value="{{ $computer->id }}">
-                {{ $computer->name }}
+                {{ $computer->number }}
             </option>
         @endforeach
     </select>
