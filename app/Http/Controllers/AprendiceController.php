@@ -24,6 +24,7 @@ class AprendiceController extends Controller
      public function create (){
 
     $courses=Course::all();
+
     $computers=Computer::all();
 
      return view('aprendice.create',compact('courses','computers'));

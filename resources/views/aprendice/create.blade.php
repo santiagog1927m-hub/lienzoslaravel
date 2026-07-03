@@ -1,11 +1,7 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aprendice create</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+
 <h1>formulario aprendice</h1>
 
 <form action="{{route('aprendice.store')}}" method="POST" enctype="multipart/form-data">
@@ -36,7 +32,7 @@
 
 {{-- {{$courses}} --}}
 
-<label for="course_id">Area</label>
+<label for="course_id">CURSO</label>
 
     <select name="course_id" id="user_id" class="form-control">
         <option value="">Seleccione un curso</option>
@@ -72,6 +68,4 @@
 <button type="submit">Enviar Formulario:</button>
 </form>
 
-
-</body>
-</html>
+@endsection

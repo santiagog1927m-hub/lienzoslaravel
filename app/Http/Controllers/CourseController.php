@@ -9,22 +9,26 @@ use App\Models\Training_center;
 
 class CourseController extends Controller
 {
-    public function consultaArea(){
+    public function consultaArea()
+    {
         $curso = Course::find(2);
         return $curso->area;
     }
 
-    public function consultaCentro(){
+    public function consultaCentro()
+    {
         $curso = Course::find(1);
         return $curso->training_center;
     }
 
-    public function consultaAprendiz(){
+    public function consultaAprendiz()
+    {
         $curso = Course::find(1);
         return $curso->aprendices;
     }
 
-    public function consultaProfe(){
+    public function consultaProfe()
+    {
         $curso = Course::find(1);
         return $curso->teachers;
     }
@@ -33,21 +37,21 @@ class CourseController extends Controller
 
 
 
-     public function create (){
+    public function create()
+    {
 
-    $areas=Area::all();
-    $training_centers=Training_center::all();
+        $areas = Area::all();
+        $training_centers = Training_center::all();
 
-     return view('course.create',compact('areas','training_centers'));
+        return view('course.create', compact('areas', 'training_centers'));
     }
 
 
-    public function store(Request $request){
-   
-    $course=Course::create($request->all());
+    public function store(Request $request)
+    {
 
-    return $course;
+        $course = Course::create($request->all());
 
-
+        return $course;
     }
 }

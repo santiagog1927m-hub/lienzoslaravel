@@ -1,11 +1,7 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>trainig_center create</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
+
 <h1>formulario training_center</h1>
 
 <form action="{{route('training_center.store')}}" method="POST" enctype="multipart/form-data">
@@ -30,6 +26,4 @@
 <button type="submit">Enviar Formulario:</button>
 </form>
 
-
-</body>
-</html>
+@endsection
