@@ -34,4 +34,12 @@ class AreaController extends Controller
     return $area;
 
     }
+    
+     public function index(){
+
+    $areas = Area::all();
+    return view('area.index',compact('areas'));
+
+
+    }
 }

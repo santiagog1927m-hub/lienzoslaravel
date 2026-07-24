@@ -31,5 +31,13 @@ class ComputerController extends Controller
     return $computer;
 
     }
+     public function index(){
+
+    $pc = Computer::all();
+    return view('computer.index',compact('computers'));
+
+
+    }
+
 
 }
